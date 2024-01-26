@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    transition: 100ms all;
+}
+
+main {
+    padding: 24px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.header-container{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding-inline: 24px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.title {
+    font-weight: 800;
+}
+
+
+.users-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    gap: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.user-card {
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 24px;
+    transition: 0.2s;
+}
+
+.user-card:hover {
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card-title {
+    font-size: 18px;
+    margin-block: 8px;
+    font-weight: 600;
+}
+
+
+.user-card img {
+    width: 100px;
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.details, .user-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 10px;
+}
+
+.icon-close-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+    border-radius: 6px;
+    margin-top: 18px;
+
+}
+
+ul {
+    margin: 10px 20px;
+    padding-inline-start: 0;
+}
+
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    cursor: pointer;
+    
+}
+
+ul li:hover {
+    color: rgb(221, 178, 178);
+}
+
+
+button.btn-add-job {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 35px 0
+}
+
+button.btn-add-job:hover {
+    background: rgb(221, 178, 178);
+    color: #000;
+    transition: 0.5s;
+}
+
+
+.content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content .card-title {
+    font-size: 20px;
+}
+
+.input-box {
+    position: relative;
+    height: 50px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box input {    
+    
+    
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 20px 0;
+    border-bottom: 2px solid #162938;
+    padding: 10px 35px 10px 5px;
+}
+
+.content p span {
+    font-weight: 600;
+}
+
+#overlay-form {
+    display: none;
+}
+
+
+@media(max-width: 768px) {
+    .card-title, .title{
+        font-size: 16px;
+    }
+    button {
+        width: 60px;
+    }
+
+}
